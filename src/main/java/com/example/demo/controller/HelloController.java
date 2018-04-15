@@ -1,19 +1,21 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController  
-public class HelloController {  
-	
+import com.example.demo.exception.BusinessException;
+
+@RestController
+public class HelloController {
+
 	@Value("${tw.msg}")
 	private String message;
-	
-    @RequestMapping("/greeting")  
-    public String hello()  
-    {  
-        return message;  
-    }  
-} 
+
+	@RequestMapping("/greeting")
+	public String hello() {
+		throw new BusinessException(100, "出错了");
+		// int a = 1 / 0;
+		// return message;
+	}
+}
