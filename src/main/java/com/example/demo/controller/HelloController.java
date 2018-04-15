@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController  
-@PropertySource(value = {"classpath:application.properties"},encoding="utf-8") 
 public class HelloController {  
 	
 	@Value("${tw.msg}")
