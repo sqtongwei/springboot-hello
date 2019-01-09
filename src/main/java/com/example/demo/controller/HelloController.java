@@ -15,6 +15,5 @@ public class HelloController {
 	@RequestMapping("/greeting")
 	public String hello() {
 //		throw new BusinessException(100, "出错了");
-		 return "msg: " + message;
-	}
+		 return "msg3:" + message;	}
 }
